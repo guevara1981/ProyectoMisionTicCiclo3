@@ -32,6 +32,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/usuario.css">
 
+
 </head>
 
 <body>
@@ -40,9 +41,11 @@
 
         <div class="container d-flex align-items-center">
 
+            <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="" class="img-fluid"
+                    class="logo me-auto"></a>
+
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="" class="img-fluid" class="logo me-auto"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -50,29 +53,31 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="#">Homero</a>
-                            <a class="nav-link" href="#">Features</a>
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link active" aria-current="page" href="#">Servicios</a>
+                            <a class="nav-link" href="#">Tus citas</a>
+                            <a class="nav-link" href="#">Resultados</a>
                         </div>
                     </div>
                 </div>
             </nav>
+
+            <a href="login.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Programa tu
+                </span>cita</a>
 
             <div class="container d-flex justify-content-end">
                 <ul>
                     <li class="nav-item nav-profile dropdown mr-0 mr-sm-2" style="list-style: none;">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <img class="avatar" src="img/icon.png" alt="profile" />
-                            <span class="nav-profile-name">Cristhian</span>
+                            <img class="avatar" src="img/logoperfil.jpg" alt="profile" />
+                            <span class="nav-profile-name">Usuario</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right navbar-dropdown " aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="index.html">salir</a></li>
                         </ul>
 
                     </li>
@@ -82,96 +87,62 @@
 
     </header><!-- End Header -->
 
-    <main>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur officiis itaque temporibus similique ipsa
-        facilis. Incidunt assumenda, repellat sint at doloribus esse molestiae ipsa, aspernatur velit id odit, obcaecati
-        necessitatibus.
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia similique dicta nihil tenetur, veniam
-        laboriosam non consequatur neque praesentium quaerat unde alias, dolorem maiores officia repellendus? Numquam
-        debitis quo suscipit?
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eligendi, non fugit aliquam, cumque amet aliquid
-        soluta voluptates repellendus, nisi sit doloremque beatae necessitatibus eius laborum sunt aspernatur!
-        Praesentium, repellendus.
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    <main id="main">
+
+        <div id="data" class="container pt-5 px-0">
+            <div class="categories d-flex flex-column flex-shrink-0 p-3 text-white bg-white">
+                <a href="#"
+                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap" />
+                    </svg>
+                    <span class="fs-4">Categories</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="/catalog/1"
+                            class="nav-link " aria-current="page">
+                            <span>Hematologia</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/catalog/2"
+                            class="nav-link " aria-current="page">
+                            <span>Inmunologia</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/catalog/3"
+                            class="nav-link " aria-current="page">
+                            <span>Quimica</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/catalog/4"
+                            class="nav-link " aria-current="page">
+                            <span>Microbiologia</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="results" class="text-center">
+                <h1>Consulta servicios</h1>
+                <div class="d-flex flex-column flex-shrink-0 p-3 album">
+                    <div class="container">
+                        <div>
+                            <p>Por favor seleccionar categoria</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </main>
-
-
-
-    <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="vendor/purecounter/purecounter_vanilla.js"></script>
