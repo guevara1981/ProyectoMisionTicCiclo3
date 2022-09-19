@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AgendaLabApplication<agenda-lab>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "proyectov1.agendalab.AgendaLabApplication",
+            "projectName": "agenda-lab",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
