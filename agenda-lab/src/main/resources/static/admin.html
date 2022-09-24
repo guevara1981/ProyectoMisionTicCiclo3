@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>AgendaLab</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="img/icon.png" rel="icon">
+    <link href="img/icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/usuario.css">
+
+
+</head>
+
+<body>
+    <!-- ======= Header ======= 8AC53F color verde, color azul #3F559E -->
+    <header id="header">
+
+        <div class="container d-flex align-items-center">
+
+            <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="" class="img-fluid"
+                    class="logo me-auto"></a>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="#">Servicios</a>
+                            <a class="nav-link" aria-current="page" href="#">Departamentos</a>
+                            <a class="nav-link" aria-current="page" href="#">Agenda</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="container d-flex justify-content-end">
+                <ul>
+                    <li class="nav-item nav-profile dropdown mr-0 mr-sm-2" style="list-style: none;">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="avatar" src="img/logoperfil.jpg" alt="profile" />
+                            <span class="nav-profile-name">Administrador</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right navbar-dropdown " aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="index.html">Salir</a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header><!-- End Header -->
+
+
+    <!--<main id="main">
+
+        <div id="data" class="container pt-5 px-0">
+            <div class="categories d-flex flex-column flex-shrink-0 p-3 text-white bg-white">
+                <a href="#"
+                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap" />
+                    </svg>
+                    <span class="fs-4">Departamentos</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="/catalog/1"
+                            class="nav-link " aria-current="page">
+                            <span>Hematología</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/catalog/2"
+                            class="nav-link " aria-current="page">
+                            <span>Inmunología</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/catalog/3"
+                            class="nav-link " aria-current="page">
+                            <span>Quimica</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/catalog/4"
+                            class="nav-link " aria-current="page">
+                            <span>Microbiologia</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+
+
+    </main>
+    -->
+
+    <!-- Vendor JS Files -->
+    <script src="vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>
+
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Administración de Servicios</h2>
+            </div>
+
+        <div>
+            <form>
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <input type="text" name="n.service" class="form-control" id="n.service" placeholder="Nombre del Servicio">  
+                        <div class="validate"></div>
+                    </div>
+                      
+                    <div class="col-md-4 form-group mt-3">
+                        <select name="department" id="department" class="form-select">
+                            <option value="">Departamento</option>
+                            <option value="Hematología"></option>
+                            <option value="Inmunología"></option>
+                            <option value="Química"></option>
+                            <option value="Microbiología"></option>
+                        </select>
+                        <div class="validate"></div>
+                    </div>
+
+                    <div class="col-md-4 form-group mt-3">
+                        <input type="text" name="price" id="price" class="form-control" placeholder="Valor">
+                        <div class="validate"></div>
+                    </div>
+                  </div>
+            </form>
+        </div>
+        
+        <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Descripción"></textarea>
+            <div class="validate"></div>
+        </div>
+        
+        <div class="text-center">
+            <button class="appointment-btn scrollto" type="submit">Crear</button>
+            <button class="appointment-btn scrollto" type="remove">Editar</button>
+            <button class="appointment-btn scrollto" type="remove">Eliminar</button>
+        </div>
+
+
+      </form>
+
+      
+    </section>
+
+</body>
+
+</html>
