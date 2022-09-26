@@ -44,7 +44,7 @@
             <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="" class="img-fluid"
                     class="logo me-auto"></a>
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                 </div>
-            </nav>
+            </nav> -->
 
 
             <div class="container d-flex justify-content-end">
@@ -145,51 +145,49 @@
     <section>
         <div class="container">
             <div class="section-title">
-                <h2>Administración de Servicios</h2>
+                <h2>Exámenes</h2>
             </div>
 
-        <div>
-            <form>
-                <div class="row">
-                    <div class="col-md-4 form-group">
-                        <input type="text" name="n.service" class="form-control" id="n.service" placeholder="Nombre del Servicio">  
-                        <div class="validate"></div>
-                    </div>
-                      
-                    <div class="col-md-4 form-group mt-3">
-                        <select name="department" id="department" class="form-select">
-                            <option value="">Departamento</option>
-                            <option value="Hematología"></option>
-                            <option value="Inmunología"></option>
-                            <option value="Química"></option>
-                            <option value="Microbiología"></option>
+            <div class="exam">
+                <form>    
+
+                    <div>
+                        <input type="number" name="cups" class="form-control" id="cups" min="900000" max="999999" placeholder="Código único de prestación de servicios"><br>
+
+                    <div>
+                        <select name="section" id="section" class="form-select"> 
+                            <option value="Tipo">Sección</option>
+                            <option value="Hematología">Hematología</option>
+                            <option value="Inmunología">Inmunología</option>
+                            <option value="Química">Química</option>
+                            <option value="Microbiología">Microbiología</option> <br>
                         </select>
-                        <div class="validate"></div>
+                    </div><br>
+
+                    <div>
+                        <input type="text" name="examen" class="form-control" id="examen" placeholder="Nombre del exámen"> <br>
                     </div>
 
-                    <div class="col-md-4 form-group mt-3">
-                        <input type="text" name="price" id="price" class="form-control" placeholder="Valor">
-                        <div class="validate"></div>
+                    <div>
+                        <input type="text" name="price" id="price" class="form-control" placeholder="Valor"><br>
                     </div>
-                  </div>
-            </form>
-        </div>
+
+                    <div>
+                        <textarea class="form-control" name="d.exam" rows="10" placeholder="Descripción del exámen"></textarea>
+                        <br>
+                    </div>
+                        
+                    <div class="text-center">
+                        <button class="appointment-btn scrollto" type="submit">Crear</button>
+                        <button class="appointment-btn scrollto" type="submit">Consultar</button>
+                        <button class="appointment-btn scrollto" type="remove">Modificar</button>
+                        <button class="appointment-btn scrollto" type="remove">Eliminar</button>
+                    </div>
+
+                </form>
+
+            </div>
         
-        <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Descripción"></textarea>
-            <div class="validate"></div>
-        </div>
-        
-        <div class="text-center">
-            <button class="appointment-btn scrollto" type="submit">Crear</button>
-            <button class="appointment-btn scrollto" type="remove">Editar</button>
-            <button class="appointment-btn scrollto" type="remove">Eliminar</button>
-        </div>
-
-
-      </form>
-
-      
     </section>
 
 </body>
