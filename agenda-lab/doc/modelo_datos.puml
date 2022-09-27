@@ -1,0 +1,18 @@
+@startuml
+
+class Usuarios{
+    - String username pk
+    - String contrasena
+    - String nombres
+    - String apellidos
+    - String email
+    - String direccion
+    - String tel_fijo
+    - String tel_movil
+    - Boolean active
+    +set()
+    +get()
+
+}
+
+@enduml
