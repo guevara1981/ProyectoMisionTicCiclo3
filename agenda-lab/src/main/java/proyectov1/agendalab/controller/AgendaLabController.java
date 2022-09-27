@@ -3,12 +3,14 @@ package proyectov1.agendalab.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.thymeleaf.engine.AttributeName;
 
 @Controller
 public class AgendaLabController {
     @GetMapping("/admin")
     public String goToAdmin(Model model){
-        return "admin";
+        model.addAttribute("exam", "Parametrización de exámenes");
+    return "admin";
     }
 
     @GetMapping("/contactenos")
