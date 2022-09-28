@@ -1,4 +1,4 @@
-package proyectov1.agendalab.controller.dto;
+package proyectov1.agendalab.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,14 +7,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import lombok.AllArgsConstructor;
+import proyectov1.agendalab.controller.dto.LoginSolicitud;
 import proyectov1.agendalab.service.SecurityService;
+import lombok.AllArgsConstructor;
+
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/login/")
+@RequestMapping("api/login")
 public class LoginRestController {
-
     // post -> Insertar: Crear, para cuando no es crud
     // Get -> Consultar o Listar: Read,  la info viene por la URl
     // put -> Actualizar: Update
@@ -30,7 +31,7 @@ public class LoginRestController {
             return ResponseEntity.ok(respuesta);
         } catch (RuntimeException ex){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-            .body(ex.getMessage());
+                    .body(ex.getMessage());
         }
 
     }

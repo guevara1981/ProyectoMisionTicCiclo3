@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import proyectov1.agendalab.controller.dto.UsuariosRespuesta;
 import proyectov1.agendalab.controller.dto.UsuariosSolicitud;
-import proyectov1.agendalab.model.entity.Usuarios;
 import proyectov1.agendalab.model.repository.UsuariosRepository;
 import proyectov1.agendalab.service.SecurityService;
 import lombok.AllArgsConstructor;
@@ -26,7 +25,7 @@ public class SecurityServiceImpl implements SecurityService {
         }
 
         var user = userOp.get();
-        if(!user.getActive()){
+        if(!user.getActivo()){
             throw new RuntimeException("Usuario inactivo");
         }
         
@@ -86,30 +85,31 @@ public class SecurityServiceImpl implements SecurityService {
 
     @Override
     public void crearUsuarios(UsuariosSolicitud user) {
-        // TODO Auto-generated method stub
+        
+     
     }
 
     @Override
     public void actualizarUsuarios(UsuariosSolicitud user) {
-        // TODO Auto-generated method stub
+        
         
     }
 
     @Override
     public void borrarUsuarios(String username) {
-        // TODO Auto-generated method stub
+       
         
     }
 
     @Override
     public void activarUsuarios(String username) {
-        // TODO Auto-generated method stub
+        
         
     }
 
     @Override
     public void inactivarUsuarios(String username) {
-        // TODO Auto-generated method stub
+        
         
     }
 

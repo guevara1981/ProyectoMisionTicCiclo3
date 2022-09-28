@@ -7,13 +7,21 @@ import lombok.Data;
 @Data
 public class UsuariosSolicitud {
     private String username;
+
     private String contrasena;
+
     private String nombres;
+
     private String apellidos;
+
     private String email;
+
     private String direccion;
+
     private String tel_fijo;
+
     private String tel_movil;
+    
     private Boolean admin;
     
 }

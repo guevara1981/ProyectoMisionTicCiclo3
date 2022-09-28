@@ -27,7 +27,7 @@ public class Usuarios {
 
     private String tel_movil;
 
-    private Boolean active;
+    private Boolean activo;
     
     private Boolean admin;
     

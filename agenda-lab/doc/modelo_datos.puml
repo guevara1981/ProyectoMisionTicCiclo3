@@ -10,6 +10,7 @@ class Usuarios{
     - String tel_fijo
     - String tel_movil
     - Boolean active
+    - Boolean admin
     +set()
     +get()
 
