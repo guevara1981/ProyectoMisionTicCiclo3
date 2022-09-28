@@ -12,7 +12,6 @@ import lombok.Data;
 @Data
 public class Usuarios {
     @Id
-    @Column(name= "usuarios_id")
     private String username;
     private String contrasena;
     private String nombres;

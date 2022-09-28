@@ -1,5 +1,9 @@
 @startuml
 
+class Examenes{
+    - String name
+}
+
 class Usuarios{
     - String username pk
     - String contrasena
