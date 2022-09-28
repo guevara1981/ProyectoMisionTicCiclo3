@@ -7,6 +7,13 @@ import org.thymeleaf.engine.AttributeName;
 
 @Controller
 public class AgendaLabController {
+
+    @GetMapping(value = {"/", "/index", "/index.html"})
+    public String goToIndex(Model model){
+        return "index";
+    }
+
+
     @GetMapping("/admin")
     public String goToAdmin(Model model){
         model.addAttribute("exam", "Parametrización de exámenes");
