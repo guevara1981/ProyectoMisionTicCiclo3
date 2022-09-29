@@ -1,8 +1,22 @@
 @startuml
 
-class Examenes{
-    - String name
+class Seccion{
+    - String nombre
+    + void setNombre(String nombre)
+    + String getNombre()
+
 }
+
+class Examen{
+    - Long cups pk
+    - String examen
+    - Double valor
+    - String descripcion
+    - fk_SeccionNombre
+    + set()
+    + get()
+}
+Seccion "1" o-- "*" Examen
 
 class Usuarios{
     - String username pk

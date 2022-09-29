@@ -17,6 +17,8 @@ public class AgendaLabController {
     @GetMapping("/admin")
     public String goToAdmin(Model model){
         model.addAttribute("exam", "Parametrización de exámenes");
+
+
     return "admin";
     }
 
@@ -37,7 +39,7 @@ public class AgendaLabController {
 
     @GetMapping("/servicios")
     public String goToServicios(Model model){
-        return "contactenos";
+        return "servicios";
     }
 
     @GetMapping("/usuario")
