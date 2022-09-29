@@ -20,7 +20,7 @@ public class Seccion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false, length = 100)
     private String nombre;    

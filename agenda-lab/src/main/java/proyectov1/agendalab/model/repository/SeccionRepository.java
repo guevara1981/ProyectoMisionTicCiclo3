@@ -9,6 +9,6 @@ public interface SeccionRepository {
     
     List<Seccion>findAll();
 
-    Optional<Seccion>findById(long id);
+    Optional<Seccion>findById(Integer id);
     
 }

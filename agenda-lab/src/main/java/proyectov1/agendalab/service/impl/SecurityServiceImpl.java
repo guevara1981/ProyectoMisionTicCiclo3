@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import proyectov1.agendalab.controller.dto.UsuariosRespuesta;
 import proyectov1.agendalab.controller.dto.UsuariosSolicitud;
-import proyectov1.agendalab.model.repository.UsuariosRepository;
+import proyectov1.agendalab.model.repository.UsuarioRepository;
 import proyectov1.agendalab.service.SecurityService;
 import lombok.AllArgsConstructor;
 
@@ -15,7 +15,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class SecurityServiceImpl implements SecurityService {
 
-    private final UsuariosRepository usuariosRepository;
+    private final UsuarioRepository usuariosRepository;
 
     @Override
     public UsuariosRespuesta validarUsuario(String username, String contrasena) {

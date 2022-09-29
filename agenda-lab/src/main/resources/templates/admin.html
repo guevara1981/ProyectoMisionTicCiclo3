@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>AgendaLab</title>
+    <title>Agenda Lab</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -32,33 +32,16 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/usuario.css">
 
-
 </head>
 
 <body>
+
     <!-- ======= Header ======= 8AC53F color verde, color azul #3F559E -->
     <header id="header">
 
         <div class="container d-flex align-items-center">
 
             <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="" class="img-fluid"></a>
-
-            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="#">Servicios</a>
-                            <a class="nav-link" aria-current="page" href="#">Departamentos</a>
-                            <a class="nav-link" aria-current="page" href="#">Agenda</a>
-                        </div>
-                    </div>
-                </div>
-            </nav> -->
 
 
             <div class="container d-flex justify-content-end">
@@ -84,120 +67,100 @@
 
     </header><!-- End Header -->
 
-
-    <!--<main id="main">
-
-        <div id="data" class="container pt-5 px-0">
-            <div class="categories d-flex flex-column flex-shrink-0 p-3 text-white bg-white">
-                <a href="#"
-                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32">
-                        <use xlink:href="#bootstrap" />
-                    </svg>
-                    <span class="fs-4">Departamentos</span>
-                </a>
-                <hr>
-                <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="nav-item">
-                        <a href="/catalog/1"
-                            class="nav-link " aria-current="page">
-                            <span>Hematología</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/catalog/2"
-                            class="nav-link " aria-current="page">
-                            <span>Inmunología</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/catalog/3"
-                            class="nav-link " aria-current="page">
-                            <span>Quimica</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/catalog/4"
-                            class="nav-link " aria-current="page">
-                            <span>Microbiologia</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-        </div>
-
-
-    </main>
-    -->
-
-    <!-- Vendor JS Files -->
-    <script src="vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="vendor/php-email-form/validate.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="js/main.js"></script>
-
-    <section>
-        <div class="container">
-            <div class="section-title">
-                <h2 th:text="${exam}">Exámenes</h2>
-            </div>
-
-            <div class="exam">
-                <form>    
-
-                    <div>
-                        <input type="number" name="cups" class="form-control" id="cups" min="900000" max="999999" placeholder="Código único de prestación de servicios"><br>
-
-                    <div action="/admin" th:action="@{/search}" th:object="${secciones}" method="post">
-                            <select name="section" id="section" class="form-select">
-                                  <option th:each="Item : ${seccionesSelect}"
-                                    th:value="${Item.nombre}" 
-                                    th:text="${Item.nombre}"
-                                    th:selected="false"
-                                    />
-                            </select><br>
-                    </div>
-
-                    <!-- <div>
-                        <select name="section" id="section" class="form-select"> 
-                            <option value="Tipo">Sección</option>
-                            <option value="Hematología">Hematología</option>
-                            <option value="Inmunología">Inmunología</option>
-                            <option value="Química">Química</option>
-                            <option value="Microbiología">Microbiología</option> <br>
-                        </select>
-                    </div><br> -->
-
-                    <div>
-                        <input type="text" name="examen" class="form-control" id="examen" placeholder="Nombre del exámen"> <br>
-                    </div>
-
-                    <div>
-                        <input type="text" name="price" id="price" class="form-control" placeholder="Valor"><br>
-                    </div>
-
-                    <div>
-                        <textarea class="form-control" name="d.exam" rows="10" placeholder="Descripción del exámen"></textarea>
-                        <br>
-                    </div>
-                        
-                    <div class="text-center">
-                        <button class="appointment-btn scrollto" type="submit">Crear</button>
-                        <button class="appointment-btn scrollto" type="submit">Consultar</button>
-                        <button class="appointment-btn scrollto" type="remove">Modificar</button>
-                        <button class="appointment-btn scrollto" type="remove">Eliminar</button>
-                    </div>
-
-                </form>
-
-            </div>
+    <div class="row">
         
-    </section>
+        <!--<main id="main">
+
+            <div id="data" class="container pt-5 px-0">
+                <div class="categories d-flex flex-column flex-shrink-0 p-3 text-white bg-white">
+                    <a href="#"
+                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32">
+                            <use xlink:href="#bootstrap"/>
+                        </svg>
+                        <span class="fs-4">Secciones</span>
+                    </a>
+                    <hr>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li th:each="seccion: ${secciones}" class="nav-item">
+                            <a href="#" class="nav-link" aria-current="page">
+                                <span th:text="${seccion.nombre}"></span>
+                            </a>
+                        </li>                             
+                    </ul>
+                </div>
+            
+            </div>
+        </main> -->
+
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2 th:text="${exam}">Exámenes</h2>
+                </div>
+
+                <div class="exam">
+                    <form>
+                        <div>
+                            <input type="number" name="cups" class="form-control" id="cups" min="900000" max="999999" placeholder="Código único de prestación de servicios"><br>
+                        </div>
+
+                        <div>
+                            <select name="section" id="section" class="form-select">
+                                <option th:each="seccion:${secciones}"
+                                    th:value="${seccion.id}"
+                                    th:text="${seccion.nombre}"
+                                    />
+                            </select>
+                        </div><br>
+
+                        <!-- <div>
+                            <select name="section" id="section" class="form-select"> 
+                                <option value="Tipo">Sección</option>
+                                <option value="Hematología">Hematología</option>
+                                <option value="Inmunología">Inmunología</option>
+                                <option value="Química">Química</option>
+                                <option value="Microbiología">Microbiología</option> <br>
+                            </select>
+                        </div><br> -->
+
+                        <div>
+                            <input type="text" name="examen" class="form-control" id="examen" placeholder="Nombre del exámen"> <br>
+                        </div>
+
+                        <div>
+                            <input type="text" name="price" id="price" class="form-control" placeholder="Valor"><br>
+                        </div>
+
+                        <div>
+                            <textarea class="form-control" name="d.exam" rows="10" placeholder="Descripción del exámen"></textarea>
+                            <br>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button class="appointment-btn scrollto" type="submit">Crear</button>
+                            <button class="appointment-btn scrollto" type="submit">Consultar</button>
+                            <button class="appointment-btn scrollto" type="remove">Modificar</button>
+                            <button class="appointment-btn scrollto" type="remove">Eliminar</button>
+                        </div>
+
+                    </form>
+
+                </div>
+        
+        </section>
+
+    </div>
+
+<!-- Vendor JS Files -->
+<script src="vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/glightbox/js/glightbox.min.js"></script>
+<script src="vendor/swiper/swiper-bundle.min.js"></script>
+<script src="vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="js/main.js"></script>
 
 </body>
 

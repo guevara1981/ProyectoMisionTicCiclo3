@@ -8,11 +8,12 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "usuario")
 @Data
-public class Usuarios {
+public class Usuario {
     @Id
     private String username;
+    private Integer identificacion;
     private String contrasena;
     private String nombres;
     private String apellidos;
