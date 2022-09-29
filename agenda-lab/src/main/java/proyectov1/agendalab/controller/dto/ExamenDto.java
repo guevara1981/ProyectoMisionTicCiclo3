@@ -7,7 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SeccionDto {
-    private String nombre;
-    private Integer id;   
+public class ExamenDto {
+    
+    private Integer cups;
+    private String examen;
+    private Double valor;
+    private String descripcion;
 }
