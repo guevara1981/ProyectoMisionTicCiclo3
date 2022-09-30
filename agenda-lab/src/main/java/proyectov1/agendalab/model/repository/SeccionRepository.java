@@ -8,6 +8,6 @@ import proyectov1.agendalab.model.entity.Seccion;
 
 public interface SeccionRepository extends JpaRepository<Seccion, Integer> {
 
-    Optional<Seccion> findByNombre(String string);
-   
+   Optional<Seccion> findByNombre(String string);
+    
 }

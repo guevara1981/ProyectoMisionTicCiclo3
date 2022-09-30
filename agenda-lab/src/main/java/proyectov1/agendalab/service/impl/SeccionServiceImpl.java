@@ -22,15 +22,18 @@ public class SeccionServiceImpl implements SeccionService {
     private final SeccionRepository seccionRepository;
     //private final ExamenRepository examenRepository;
 
+    
+
+
     @Override
     public List<SeccionDto> getSecciones() {
         var secciones = seccionRepository.findAll(Sort.by("nombre"));
-
+        
         return secciones.stream()
                 .map(sec -> new SeccionDto(sec.getNombre(), sec.getId()))
                 .collect(Collectors.toList());
     }
-
+   
     @Override
     public Optional<SeccionDto> getSeccionById(Integer id) {
         var seccion = seccionRepository.findById(id);

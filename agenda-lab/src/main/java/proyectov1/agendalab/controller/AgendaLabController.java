@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import lombok.AllArgsConstructor;
 //import proyectov1.agendalab.controller.dto.ExamenDto;
-//import proyectov1.agendalab.controller.dto.SeccionDto;
 import proyectov1.agendalab.controller.dto.SeccionDto;
+import proyectov1.agendalab.service.SeccionService;
 
 @AllArgsConstructor
 @Controller
@@ -35,13 +35,15 @@ public class AgendaLabController {
     public String goToAdmin(Model model){
         model.addAttribute("exam", "Parametrización de exámenes");
         
-
+        //var secciones = SeccionService.getSecciones();
+        
+        
         var secciones = Arrays.asList(
-            new SeccionDto("Inmunología",1),
-             new SeccionDto("Microbiología",2),
-             new SeccionDto("Hematología",3),
-             new SeccionDto("Química",4)
-         );
+             new SeccionDto("Inmunología",1),
+              new SeccionDto("Microbiología",2),
+              new SeccionDto("Hematología",3),
+              new SeccionDto("Química",4)
+          );
                 
         model.addAttribute("secciones", secciones);
         
