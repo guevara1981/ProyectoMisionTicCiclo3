@@ -3,10 +3,12 @@ package proyectov1.agendalab.model.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import lombok.Data;
 
 @Entity
+@Table(name = "examen")
 @Data
 public class Examen {
     @Id
@@ -17,5 +19,5 @@ public class Examen {
     private String descripcion;
 
     @ManyToOne
-    private Seccion secciones;
+    private Seccion seccion;
     }

@@ -25,7 +25,10 @@ public class Seccion {
     @Column(nullable = false, length = 100)
     private String nombre;    
 
-    @OneToMany
+    @OneToMany(mappedBy = "seccion")
     private List<Seccion> secciones;
-}
 
+    public Seccion(String nombre){
+        this.nombre = nombre;
+    }
+}

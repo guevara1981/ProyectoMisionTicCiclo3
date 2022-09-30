@@ -7,10 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-
+import lombok.AllArgsConstructor;
 import proyectov1.agendalab.controller.dto.ExamenDto;
 import proyectov1.agendalab.controller.dto.SeccionDto;
 
+@AllArgsConstructor
 @Controller
 public class AgendaLabController {
 
@@ -29,14 +30,17 @@ public class AgendaLabController {
 
     @GetMapping("/admin")
     public String goToAdmin(Model model){
-        model.addAttribute("exam", "Parametrización de exámenes");
+        var secciones = this.SeccionService.getSecciones();
 
-        var secciones = Arrays.asList(
-            new SeccionDto("Inmunología",1),
-            new SeccionDto("Microbiología",2),
-            new SeccionDto("Hematología",3),
-            new SeccionDto("Química",4)
-        );
+        model.addAttribute("exam", "Parametrización de exámenes");
+        
+
+        // var secciones = Arrays.asList(
+        //     new SeccionDto("Inmunología",1),
+        //     new SeccionDto("Microbiología",2),
+        //     new SeccionDto("Hematología",3),
+        //     new SeccionDto("Química",4)
+        // );
                 
         model.addAttribute("secciones", secciones);
         

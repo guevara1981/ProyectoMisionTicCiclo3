@@ -2,9 +2,15 @@ package proyectov1.agendalab.model.repository;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import proyectov1.agendalab.model.entity.Examen;
 
-public interface ExamenRepository {
+public interface ExamenRepository extends JpaRepository<Examen, Long> {
     
-    List<Examen> findAllByCategory(Long categoryId);
+    List<Examen> findAllBySeccion(Long seccionId);
+
+    List<Examen> findAllBySeccionId(List<Long> seccionIds);
+
+    List<Examen> findAllByDescriptionLikeOrderByNameAsc(String description);
 }
