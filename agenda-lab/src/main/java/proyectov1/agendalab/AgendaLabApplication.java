@@ -49,7 +49,12 @@ public class AgendaLabApplication {
 
 	}
 
-	
+	//private final List<SeccionDto> seccion = Arrays.asList(
+            
+
+    //private final List<ExamenDto> examenes = Arrays.asList(
+            //new ExamenDto(901001, "Antibiograma (disco)", 15000.00,"El antibiograma es la prueba microbiológica que se realiza para determinar la susceptibilidad (sensibilidad o resistencia) de una bacteria a un grupo de antibiótico"),
+            //new ExamenDto(901107, "Gram de Orina", 65000.00,"Prueba que detecta bacterias en el lugar donde se sospecha una infección"));
 
 		// private void cargarUsuarios(){
 		// 	usuariosRepository.save(new Usuarios(username:"admin", activo: true, admin: true, 

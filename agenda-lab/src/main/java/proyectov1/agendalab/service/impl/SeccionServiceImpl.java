@@ -22,9 +22,6 @@ public class SeccionServiceImpl implements SeccionService {
     private final SeccionRepository seccionRepository;
     //private final ExamenRepository examenRepository;
 
-    
-
-
     @Override
     public List<SeccionDto> getSecciones() {
         var secciones = seccionRepository.findAll(Sort.by("nombre"));
