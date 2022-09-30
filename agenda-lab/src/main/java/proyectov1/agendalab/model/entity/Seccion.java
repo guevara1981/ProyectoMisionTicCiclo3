@@ -26,9 +26,10 @@ public class Seccion {
     private String nombre;    
 
     @OneToMany(mappedBy = "seccion")
-    private List<Seccion> secciones;
-
-    public Seccion(String nombre){
+    private List<Examen> examenes;
+    
+    public Seccion(String nombre) {
         this.nombre = nombre;
     }
+
 }

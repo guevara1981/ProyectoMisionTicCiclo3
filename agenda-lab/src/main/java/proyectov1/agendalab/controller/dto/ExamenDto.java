@@ -1,16 +1,20 @@
 package proyectov1.agendalab.controller.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Builder
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+
 public class ExamenDto {
-    
     private Integer cups;
     private String examen;
     private Double valor;
     private String descripcion;
+    private Integer seccionId;
+    
 }

@@ -13,7 +13,7 @@ import lombok.Data;
 public class Usuario {
     @Id
     private String username;
-    private Integer identificacion;
+    private Long identificacion;
     private String contrasena;
     private String nombres;
     private String apellidos;
@@ -23,9 +23,9 @@ public class Usuario {
 
     private String direccion;
 
-    private String tel_fijo;
+    private Long tel_fijo;
 
-    private String tel_movil;
+    private Long tel_movil;
 
     private Boolean activo;
     

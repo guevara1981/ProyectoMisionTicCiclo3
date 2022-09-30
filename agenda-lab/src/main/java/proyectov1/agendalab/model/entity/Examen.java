@@ -15,8 +15,9 @@ public class Examen {
     private Long cups;
 
     private String examen;
-    private Double valor;
     private String descripcion;
+    private Double valor;
+
 
     @ManyToOne
     private Seccion seccion;
