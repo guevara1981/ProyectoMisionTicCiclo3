@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 public class ExamenDto {
-    private Integer cups;
+    private Long cups;
     private String examen;
     private Double valor;
     private String descripcion;

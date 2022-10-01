@@ -1,6 +1,6 @@
 package proyectov1.agendalab.service.impl;
 
-//import java.util.Date;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -8,9 +8,10 @@ import java.util.stream.Collectors;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import proyectov1.agendalab.controller.dto.ExamenDto;
 import proyectov1.agendalab.controller.dto.SeccionDto;
-//import proyectov1.agendalab.controller.dto.ExamenDto;
-//import proyectov1.agendalab.model.repository.ExamenRepository;
+import proyectov1.agendalab.model.entity.Examen;
+import proyectov1.agendalab.model.repository.ExamenRepository;
 import proyectov1.agendalab.model.repository.SeccionRepository;
 import proyectov1.agendalab.service.SeccionService;
 import lombok.AllArgsConstructor;
@@ -20,7 +21,7 @@ import lombok.AllArgsConstructor;
 public class SeccionServiceImpl implements SeccionService {
 
     private final SeccionRepository seccionRepository;
-    //private final ExamenRepository examenRepository;
+    private final ExamenRepository examenRepository;
 
     @Override
     public List<SeccionDto> getSecciones() {
@@ -43,6 +44,35 @@ public class SeccionServiceImpl implements SeccionService {
                 seccion.get().getNombre(),
                 seccion.get().getId()));
     }
+
+    @Override
+    public void guardarExamen(ExamenDto exam) {
+        var entity = new Examen();
+        entity.setCups(exam.getCups());
+        entity.setCreacion(new Date());
+        entity.setExamen(exam.getExamen());
+        entity.setDescripcion(exam.getDescripcion());
+        entity.setValor(exam.getValor());
+
+        examenRepository.save(entity);
+        
+    }
+
+    @Override
+    public void borrarExamen(ExamenDto examen) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    // @Override
+    // public void borrarExamen(Long cups) {
+    //     var examenOp = examenRepository.findById(cups);
+    //     if (examenOp.isEmpty()) {
+    //         throw new RuntimeException("El examen no existe");
+    //     }
+
+    //     examenRepository.delete(userOp.get());
+    // }
 
 
     // @Override

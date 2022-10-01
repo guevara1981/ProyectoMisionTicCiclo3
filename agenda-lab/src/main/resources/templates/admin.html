@@ -100,13 +100,13 @@
                 </div>
 
                 <div class="exam">
-                    <form>
+                    <form method="post" action="/admin/exam">
                         <div>
-                            <input type="number" name="cups" class="form-control" id="cups" min="900000" max="999999" placeholder="Código único de prestación de servicios"><br>
+                            <input id="cups" name="cups" type="number" class="form-control"  min="900000" max="999999" placeholder="Código único de prestación de servicios"><br>
                         </div>
 
                         <div>
-                            <select name="section" id="section" class="form-select">
+                            <select id="seccion" name="seccion" class="form-select">
                                 <option th:each="seccion:${secciones}"
                                     th:value="${seccion.id}"
                                     th:text="${seccion.nombre}"
@@ -115,15 +115,15 @@
                         </div><br>
 
                         <div>
-                            <input type="text" name="examen" class="form-control" id="examen" placeholder="Nombre del exámen"> <br>
+                            <input id="examen" name="examen" type="text" class="form-control" placeholder="Nombre del exámen"> <br>
                         </div>
 
                         <div>
-                            <input type="text" name="price" id="price" class="form-control" placeholder="Valor"><br>
+                            <input id="valor" name="valor" type="number" class="form-control" placeholder="Valor"><br>
                         </div>
 
                         <div>
-                            <textarea class="form-control" name="d.exam" rows="10" placeholder="Descripción del exámen"></textarea>
+                            <textarea id="descripcion" name="descripcion" class="form-control"  rows="10" placeholder="Descripción del exámen"></textarea>
                             <br>
                         </div>
                         
