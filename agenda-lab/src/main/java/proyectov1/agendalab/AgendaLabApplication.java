@@ -53,6 +53,9 @@ public class AgendaLabApplication {
 		// }
 
 		private void cargarUsuarios() {
+			
+			usuarioRepository.deleteAll();
+
 			usuarioRepository.saveAll(Arrays.asList(
 					new Usuario("admin", (long) 1085963452, "12345", "Andres", "Guevara",
 							"andresguevara_1981@hotmail.com", "Carrera 2B # 59D 51", "3206984563", true, true),
@@ -61,6 +64,9 @@ public class AgendaLabApplication {
 		}
 
 		private void cargarSecciones() {
+
+			seccionRepository.deleteAll();
+
 			seccionRepository.saveAll(Arrays.asList(
 					new Seccion("Inmunología"),
 					new Seccion("Microbiología"),
@@ -70,7 +76,7 @@ public class AgendaLabApplication {
 
 		private void cargarExamenes() {
 
-			//examenRepository.deleteAll();
+			examenRepository.deleteAll();
 
 			var inmuno = seccionRepository.findByNombre("Inmunología").get();
 			var micro = seccionRepository.findByNombre("Microbiología").get();
