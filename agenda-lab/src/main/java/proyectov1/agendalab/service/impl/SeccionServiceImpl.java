@@ -51,7 +51,6 @@ public class SeccionServiceImpl implements SeccionService {
     public void guardarExamen(ExamenDto exam) {
         var entity = new Examen();
         entity.setCups(exam.getCups());
-        entity.setCreacion(new Date());
         entity.setExamen(exam.getExamen());
         entity.setDescripcion(exam.getDescripcion());
         entity.setValor(exam.getValor());

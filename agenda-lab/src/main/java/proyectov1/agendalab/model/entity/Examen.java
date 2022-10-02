@@ -20,21 +20,24 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Examen {
+
+
     @Id
     @Column(nullable = false)
     private Long cups;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date creacion;
+    // @Temporal(TemporalType.TIMESTAMP)
+    // private Date creacion;
 
     @Column(nullable = false)
     private String examen;
-
-    private String descripcion;
 
     @Column(nullable = false)
     private Double valor;
 
     @ManyToOne
     private Seccion seccion;
-    }
+
+    private String descripcion;
+
+}
