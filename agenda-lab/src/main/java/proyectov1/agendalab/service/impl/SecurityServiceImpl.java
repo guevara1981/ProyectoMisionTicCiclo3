@@ -39,7 +39,6 @@ public class SecurityServiceImpl implements SecurityService {
                 .apellidos(user.getApellidos())
                 .email(user.getEmail())
                 .direccion(user.getDireccion())
-                .tel_fijo(user.getTel_fijo())
                 .tel_movil(user.getTel_movil())
                 .admin(user.getAdmin())
                 .build();
@@ -55,7 +54,6 @@ public class SecurityServiceImpl implements SecurityService {
                 .apellidos(u.getApellidos())
                 .email(u.getEmail())
                 .direccion(u.getDireccion())
-                .tel_fijo(u.getTel_fijo())
                 .tel_movil(u.getTel_movil())
                 .admin(u.getAdmin())
                 .build())
@@ -77,7 +75,6 @@ public class SecurityServiceImpl implements SecurityService {
                 .apellidos(user.getApellidos())
                 .email(user.getEmail())
                 .direccion(user.getDireccion())
-                .tel_fijo(user.getTel_fijo())
                 .tel_movil(user.getTel_movil())
                 .admin(user.getAdmin())
                 .build();

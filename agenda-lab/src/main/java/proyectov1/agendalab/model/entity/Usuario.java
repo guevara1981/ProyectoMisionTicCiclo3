@@ -14,9 +14,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class Usuario {
+    
     @Id
     private String username;
+    
     private Long identificacion;
     private String contrasena;
     private String nombres;
@@ -27,9 +30,7 @@ public class Usuario {
 
     private String direccion;
 
-    private Long tel_fijo;
-
-    private Long tel_movil;
+    private String tel_movil;
 
     private Boolean activo;
     

@@ -18,9 +18,7 @@ public class UsuarioSolicitud {
 
     private String direccion;
 
-    private Long tel_fijo;
-
-    private Long tel_movil;
+    private String tel_movil;
     
     private Boolean admin;
     

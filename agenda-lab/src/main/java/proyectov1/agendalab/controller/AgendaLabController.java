@@ -21,12 +21,12 @@ public class AgendaLabController {
 
     private SeccionService seccionService;
 
-    @GetMapping(value = {"/", "/index", "/index.html"})
+    @GetMapping(value = {"","/", "/index", "/index.html"})
     public String goToIndex(Model model){
         return "index";
     }
 
-    @GetMapping(value = {"/", "/admin", "/admin.html"})
+    @GetMapping(value = {"/admin", "/admin.html"})
     public String goToAdmin(Model model){
         model.addAttribute("exam", "Parametrización de exámenes");
         
@@ -44,7 +44,7 @@ public class AgendaLabController {
 
         seccionService.guardarExamen(examenInfo);
         model.addAttribute("info", examenInfo);
-        return "/admin";
+        return "admin";
 
     } 
 
