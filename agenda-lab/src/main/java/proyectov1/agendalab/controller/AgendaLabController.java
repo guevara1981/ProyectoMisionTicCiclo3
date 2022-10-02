@@ -36,9 +36,16 @@ public class AgendaLabController {
 
     @PostMapping("/adminAgregar")
     public String postExamenRegistro(@ModelAttribute ExamenDto examenInfo, Model model) {
+        model.addAttribute("exam", "Parametrización de exámenes");
         log.info(examenInfo.toString());
         examenService.guardarExamen(examenInfo);
         model.addAttribute("info", examenInfo);
+
+        var secciones = this.seccionService.getSecciones();
+
+        model.addAttribute("secciones", secciones);
+
+
         return "adminAgregar";
 
     }
