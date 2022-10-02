@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import proyectov1.agendalab.model.entity.Seccion;
 
 @Builder
 @Data
@@ -16,5 +17,4 @@ public class ExamenDto {
     private Double valor;
     private String descripcion;
     private Integer seccion;
-    
 }

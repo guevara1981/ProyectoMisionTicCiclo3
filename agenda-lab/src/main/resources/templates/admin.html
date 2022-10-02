@@ -36,12 +36,29 @@
 
 <body>
 
-    <!-- ======= Header ======= 8AC53F color verde, color azul #3F559E -->
+    <!-- ======= Header ======= -->
     <header id="header">
 
         <div class="container d-flex align-items-center">
 
             <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="" class="img-fluid"></a>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="#">Programación</a>
+                            <a class="nav-link" href="/list">Tus citas</a>
+                            <a class="nav-link" href="/">Resultados</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
 
 
             <div class="container d-flex justify-content-end">
@@ -50,14 +67,14 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <img class="avatar" src="img/logoperfil.jpg" alt="profile" />
-                            <span class="nav-profile-name">Administrador</span>
+                            <span class="nav-profile-name" id="usuario">Administrador</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right navbar-dropdown " aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Perfil</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="index.html">Salir</a></li>
+                            <li><a class="dropdown-item" href="index.html">salir</a></li>
                         </ul>
 
                     </li>
@@ -67,90 +84,66 @@
 
     </header><!-- End Header -->
 
-    <div class="row">
-        
-        <!-- <main id="main">
-
-            <div id="data" class="container pt-5 px-0">
-                <div class="categories d-flex flex-column flex-shrink-0 p-3 text-white bg-white">
-                    <a href="#"
-                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
-                        <svg class="bi me-2" width="40" height="32">
-                            <use xlink:href="#bootstrap"/>
-                        </svg>
-                        <span class="fs-4">Secciones</span>
-                    </a>
-                    <hr>
-                    <ul class="nav nav-pills flex-column mb-auto">
-                        <li th:each="seccion: ${secciones}" class="nav-item">
-                            <a href="#" class="nav-link" aria-current="page">
-                                <span th:text="${seccion.nombre}"></span>
-                            </a>
-                        </li>                             
-                    </ul>
-                </div>
-            
+    <section id="appointment" class="appointment section-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2 th:text="${exam}">Exámenes</h2>
             </div>
-        </main>  -->
 
-        <section>
-            <div class="container">
-                <div class="section-title">
-                    <h2 th:text="${exam}">Exámenes</h2>
-                </div>
+            <div>
+                <form method="post" action="/admin/exam">
+                    <div>
+                        <input id="cups" name="cups" type="number" class="form-control" min="900000" max="999999"
+                            placeholder="Código único de prestación de servicios" required><br>
+                    </div>
 
-                <div class="exam">
-                    <form method="post" action="/admin/exam">
-                        <div>
-                            <input id="cups" name="cups" type="number" class="form-control"  min="900000" max="999999" placeholder="Código único de prestación de servicios" required ><br>
-                        </div>
+                    <div>
+                        <select id="seccion" name="seccion" class="form-select">
+                            <option th:each="seccion:${secciones}" th:value="${seccion.id}" th:text="${seccion.nombre}">
+                            </option>
+                        </select>
+                    </div><br>
 
-                        <div>
-                            <select id="seccion" name="seccion" class="form-select">
-                                <option th:each="seccion:${secciones}"
-                                    th:value="${seccion.id}"
-                                    th:text="${seccion.nombre}">
-                                </option>
-                            </select>
-                        </div><br>
+                    <div>
+                        <input id="examen" name="examen" type="text" class="form-control"
+                            placeholder="Nombre del exámen" required> <br>
+                    </div>
 
-                        <div>
-                            <input id="examen" name="examen" type="text" class="form-control" placeholder="Nombre del exámen" required > <br>
-                        </div>
+                    <div>
+                        <input id="valor" name="valor" type="number" class="form-control" placeholder="Valor"
+                            required><br>
+                    </div>
 
-                        <div>
-                            <input id="valor" name="valor" type="number" class="form-control" placeholder="Valor" required><br>
-                        </div>
+                    <div>
+                        <textarea id="descripcion" name="descripcion" class="form-control" rows="10"
+                            placeholder="Descripción del exámen"></textarea>
+                        <br>
+                    </div>
 
-                        <div>
-                            <textarea id="descripcion" name="descripcion" class="form-control"  rows="10" placeholder="Descripción del exámen"></textarea>
-                            <br>
-                        </div>
-                        
-                        <div class="text-center">
-                            <button class="appointment-btn scrollto" type="submit">Crear</button>
-                            <button class="appointment-btn scrollto" type="submit">Consultar</button>
-                            <button class="appointment-btn scrollto" type="remove">Modificar</button>
-                            <button class="appointment-btn scrollto" type="remove">Eliminar</button>
-                        </div>
+                    <div class="text-center">
+                        <button class="appointment-btn scrollto" type="submit">Crear</button>
+                        <button class="appointment-btn scrollto" type="submit">Consultar</button>
+                        <button class="appointment-btn scrollto" type="remove">Modificar</button>
+                        <button class="appointment-btn scrollto" type="remove">Eliminar</button>
+                    </div>
 
-                    </form>
+                </form>
 
-                </div>
-        
-        </section>
+            </div>
 
-    </div>
+    </section>
 
-<!-- Vendor JS Files -->
-<script src="vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="vendor/glightbox/js/glightbox.min.js"></script>
-<script src="vendor/swiper/swiper-bundle.min.js"></script>
-<script src="vendor/php-email-form/validate.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="vendor/php-email-form/validate.js"></script>
 
-<!-- Template Main JS File -->
-<script src="js/main.js"></script>
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 

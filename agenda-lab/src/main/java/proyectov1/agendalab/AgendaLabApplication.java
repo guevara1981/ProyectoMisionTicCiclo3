@@ -34,9 +34,9 @@ public class AgendaLabApplication {
 
 		@Override
 		public void run(String... args) throws Exception {
-			//cargarUsuarios();
-			//cargarSecciones();
-			//cargarExamenes();
+			cargarUsuarios();
+			cargarSecciones();
+			cargarExamenes();
 		}
 
 		// private void cargarSecciones() {

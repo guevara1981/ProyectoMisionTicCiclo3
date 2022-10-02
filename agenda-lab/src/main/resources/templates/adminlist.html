@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org/">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Agenda Lab</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="img/icon.png" rel="icon">
+    <link href="img/icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/usuario.css">
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= 8AC53F color verde, color azul #3F559E -->
+    <header id="header">
+
+        <div class="container d-flex align-items-center">
+
+            <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="" class="img-fluid"></a>
+
+
+            <div class="container d-flex justify-content-end">
+                <ul>
+                    <li class="nav-item nav-profile dropdown mr-0 mr-sm-2" style="list-style: none;">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="avatar" src="img/logoperfil.jpg" alt="profile" />
+                            <span class="nav-profile-name">Administrador</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right navbar-dropdown " aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="index.html">Salir</a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header><!-- End Header -->
+
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2 th:text="${list}">Mis Examenes</h2>
+            </div>
+
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Cups</th>
+                            <th scope="col">Examen</th>
+                            <th scope="col">Seccion</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="examen:${examenes}">
+                            <td th:text="${examen.cups}"></td>
+                            <td th:text="${examen.examen}"></td>
+                            <td th:text="${examen.valor}"></td>
+                            <td th:text="${examen.valor}"></td>
+                            <td th:text="${examen.descripcion}"></td>
+                            <td>
+                                <a class="btn btn-warning">Editar</a>
+                                <a class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Vendor JS Files -->
+    <script src="vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

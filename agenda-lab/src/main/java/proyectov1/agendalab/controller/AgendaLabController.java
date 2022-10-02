@@ -1,6 +1,7 @@
 package proyectov1.agendalab.controller;
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +13,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import proyectov1.agendalab.controller.dto.ExamenDto;
 import proyectov1.agendalab.controller.dto.SeccionDto;
+import proyectov1.agendalab.service.ExamenService;
 import proyectov1.agendalab.service.SeccionService;
 
 @AllArgsConstructor
@@ -20,6 +22,7 @@ import proyectov1.agendalab.service.SeccionService;
 public class AgendaLabController {
 
     private SeccionService seccionService;
+    private ExamenService examenService;
 
     @GetMapping(value = {"","/", "/index", "/index.html"})
     public String goToIndex(Model model){
@@ -42,11 +45,25 @@ public class AgendaLabController {
     public String postExamenRegistro(@ModelAttribute ExamenDto examenInfo, Model model){
         log.info(examenInfo.toString());
 
-        seccionService.guardarExamen(examenInfo);
+        examenService.guardarExamen(examenInfo);
         model.addAttribute("info", examenInfo);
         return "admin";
 
     } 
+
+    @GetMapping("/list")
+    public String goToAdminList(Model model){
+        model.addAttribute("list", "Parametrización de exámenes");
+
+        List<ExamenDto> examenes = examenService.listarExamenes();
+        log.info(examenes.toString());
+
+        model.addAttribute("examenes", examenes);
+
+        
+
+        return "adminlist";
+    }
 
     @GetMapping("/contactenos")
     public String goToContactenos(Model model){

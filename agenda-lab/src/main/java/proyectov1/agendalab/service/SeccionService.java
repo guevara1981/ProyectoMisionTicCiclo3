@@ -13,12 +13,5 @@ public interface SeccionService {
     
     Optional<SeccionDto> getSeccionById(Integer id);
 
-    void guardarExamen(ExamenDto examen);
-
-    void borrarExamen(ExamenDto examen);
-
-    // List<ExamenDto> getExamenBySeccionId(Integer seccionId);
-
-    // ExamenDto getExamenById(String id);
 
 }
