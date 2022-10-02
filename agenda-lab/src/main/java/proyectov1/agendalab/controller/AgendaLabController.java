@@ -37,6 +37,7 @@ public class AgendaLabController {
     @PostMapping("/adminAgregar")
     public String postExamenRegistro(@ModelAttribute ExamenDto examenInfo, Model model) {
         model.addAttribute("exam", "Parametrización de exámenes");
+        
         log.info(examenInfo.toString());
         examenService.guardarExamen(examenInfo);
         model.addAttribute("info", examenInfo);
@@ -48,6 +49,17 @@ public class AgendaLabController {
 
         return "adminAgregar";
 
+    }
+
+    @GetMapping("/Agregar")
+    public String goToAdminAgregar(Model model) {
+        model.addAttribute("exam", "Parametrización de exámenes");
+
+        var secciones = this.seccionService.getSecciones();
+
+        model.addAttribute("secciones", secciones);
+
+        return "adminAgregar";
     }
 
     @GetMapping("/list")
@@ -62,16 +74,6 @@ public class AgendaLabController {
         return "adminList";
     }
 
-    @GetMapping("/Agregar")
-    public String goToAdminAgregar(Model model) {
-        model.addAttribute("exam", "Parametrización de exámenes");
-
-        var secciones = this.seccionService.getSecciones();
-
-        model.addAttribute("secciones", secciones);
-
-        return "adminAgregar";
-    }
 
     @GetMapping("/contactenos")
     public String goToContactenos(Model model) {
