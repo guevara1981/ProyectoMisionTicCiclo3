@@ -15,6 +15,6 @@ public class ExamenDto {
     private String examen;
     private Double valor;
     private String descripcion;
-    private Integer seccionId;
+    private Integer seccion;
     
 }

@@ -35,7 +35,6 @@ public class Examen {
     @Column(nullable = false)
     private Double valor;
 
-
     @ManyToOne
     private Seccion seccion;
     }

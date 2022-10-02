@@ -109,8 +109,8 @@
                             <select id="seccion" name="seccion" class="form-select">
                                 <option th:each="seccion:${secciones}"
                                     th:value="${seccion.id}"
-                                    th:text="${seccion.nombre}"
-                                    />
+                                    th:text="${seccion.nombre}">
+                                </option>
                             </select>
                         </div><br>
 
