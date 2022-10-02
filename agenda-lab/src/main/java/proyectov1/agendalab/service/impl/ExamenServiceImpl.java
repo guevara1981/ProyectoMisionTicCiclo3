@@ -35,10 +35,15 @@ public class ExamenServiceImpl implements ExamenService{
     }
 
     @Override
-    public void borrarExamen(ExamenDto examen) {
-        // TODO Auto-generated method stub
-        
+    public void borrarExamen(Long cups) {
+        var examOp = examenRepository.findById(cups);
+        if (examOp.isEmpty()) {
+            throw new RuntimeException("El examen no existe");
+        }
+        examenRepository.delete(examOp.get());
+       
     }
+
 
     @Override
     public List<ExamenDto> listarExamenes() {
