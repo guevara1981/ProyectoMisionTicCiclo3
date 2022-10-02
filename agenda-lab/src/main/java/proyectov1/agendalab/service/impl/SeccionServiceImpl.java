@@ -1,18 +1,15 @@
 package proyectov1.agendalab.service.impl;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import org.apache.catalina.valves.rewrite.InternalRewriteMap.Escape;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import proyectov1.agendalab.controller.dto.ExamenDto;
 import proyectov1.agendalab.controller.dto.SeccionDto;
 import proyectov1.agendalab.model.entity.Examen;
-import proyectov1.agendalab.model.entity.Seccion;
 import proyectov1.agendalab.model.repository.ExamenRepository;
 import proyectov1.agendalab.model.repository.SeccionRepository;
 import proyectov1.agendalab.service.SeccionService;
