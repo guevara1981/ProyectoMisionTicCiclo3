@@ -5,9 +5,9 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import proyectov1.agendalab.controller.dto.UsuariosRespuesta;
-import proyectov1.agendalab.controller.dto.UsuariosSolicitud;
-import proyectov1.agendalab.model.repository.UsuariosRepository;
+import proyectov1.agendalab.controller.dto.UsuarioRespuesta;
+import proyectov1.agendalab.controller.dto.UsuarioSolicitud;
+import proyectov1.agendalab.model.repository.UsuarioRepository;
 import proyectov1.agendalab.service.SecurityService;
 import lombok.AllArgsConstructor;
 
@@ -15,10 +15,10 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class SecurityServiceImpl implements SecurityService {
 
-    private final UsuariosRepository usuariosRepository;
+    private final UsuarioRepository usuariosRepository;
 
     @Override
-    public UsuariosRespuesta validarUsuario(String username, String contrasena) {
+    public UsuarioRespuesta validarUsuario(String username, String contrasena) {
         var userOp = usuariosRepository.findById(username);
         if(userOp.isEmpty()){
             throw new RuntimeException("Usuario no existente");
@@ -33,7 +33,7 @@ public class SecurityServiceImpl implements SecurityService {
            throw new RuntimeException("Credenciales inválidas");
         } 
 
-        return UsuariosRespuesta.builder()
+        return UsuarioRespuesta.builder()
                 .username(user.getUsername())
                 .nombres(user.getNombres())
                 .apellidos(user.getApellidos())
@@ -47,9 +47,9 @@ public class SecurityServiceImpl implements SecurityService {
     }
 
     @Override
-    public List<UsuariosRespuesta> getAllUsers() {
+    public List<UsuarioRespuesta> getAllUsers() {
         return usuariosRepository.findAll().stream()
-                .map(u -> UsuariosRespuesta.builder()
+                .map(u -> UsuarioRespuesta.builder()
                 .username(u.getUsername())
                 .nombres(u.getNombres())
                 .apellidos(u.getApellidos())
@@ -64,14 +64,14 @@ public class SecurityServiceImpl implements SecurityService {
     }
 
     @Override
-    public UsuariosRespuesta getUserByUsername(String username) {
+    public UsuarioRespuesta getUserByUsername(String username) {
         var userOp = usuariosRepository.findById(username);
         if(userOp.isEmpty()){
             throw new RuntimeException("El usuario no existe");
         }
         
         var user = userOp.get();
-        return UsuariosRespuesta.builder()
+        return UsuarioRespuesta.builder()
                 .username(user.getUsername())
                 .nombres(user.getNombres())
                 .apellidos(user.getApellidos())
@@ -84,13 +84,13 @@ public class SecurityServiceImpl implements SecurityService {
     }
 
     @Override
-    public void crearUsuarios(UsuariosSolicitud user) {
+    public void crearUsuarios(UsuarioSolicitud user) {
         
      
     }
 
     @Override
-    public void actualizarUsuarios(UsuariosSolicitud user) {
+    public void actualizarUsuarios(UsuarioSolicitud user) {
         
         
     }

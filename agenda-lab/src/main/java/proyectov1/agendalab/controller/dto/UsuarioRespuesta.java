@@ -5,23 +5,14 @@ import lombok.Data;
 
 @Builder
 @Data
-public class UsuariosSolicitud {
+public class UsuarioRespuesta {
     private String username;
-
-    private String contrasena;
-
     private String nombres;
-
     private String apellidos;
-
     private String email;
-
     private String direccion;
-
-    private String tel_fijo;
-
-    private String tel_movil;
-    
+    private Long tel_fijo;
+    private Long tel_movil;
     private Boolean admin;
     
 }

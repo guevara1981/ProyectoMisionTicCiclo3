@@ -5,14 +5,19 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "usuario")
 @Data
-public class Usuarios {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Usuario {
     @Id
     private String username;
+    private Long identificacion;
     private String contrasena;
     private String nombres;
     private String apellidos;
@@ -22,9 +27,9 @@ public class Usuarios {
 
     private String direccion;
 
-    private String tel_fijo;
+    private Long tel_fijo;
 
-    private String tel_movil;
+    private Long tel_movil;
 
     private Boolean activo;
     

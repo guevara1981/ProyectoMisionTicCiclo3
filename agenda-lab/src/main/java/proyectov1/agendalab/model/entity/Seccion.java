@@ -11,21 +11,29 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "seccion")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Seccion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false, length = 100)
     private String nombre;    
 
-    @OneToMany
-    private List<Seccion> secciones;
-}
+    @OneToMany(mappedBy = "seccion")
+    private List<Examen> examenes;
+    
+    public Seccion(String nombre) {
+        this.nombre = nombre;
+    }
 
+}

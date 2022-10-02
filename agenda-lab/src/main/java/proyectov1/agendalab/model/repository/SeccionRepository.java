@@ -1,14 +1,13 @@
 package proyectov1.agendalab.model.repository;
 
-import java.util.List;
 import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import proyectov1.agendalab.model.entity.Seccion;
 
-public interface SeccionRepository {
-    
-    List<Seccion>findAll();
+public interface SeccionRepository extends JpaRepository<Seccion, Integer> {
 
-    Optional<Seccion>findById(long id);
+   Optional<Seccion> findByNombre(String string);
     
 }

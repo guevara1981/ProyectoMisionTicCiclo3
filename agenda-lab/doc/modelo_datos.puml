@@ -12,7 +12,7 @@ class Examen{
     - String examen
     - Double valor
     - String descripcion
-    - fk_SeccionNombre
+    - fk_SeccionId
     + set()
     + get()
 }
@@ -25,8 +25,8 @@ class Usuarios{
     - String apellidos
     - String email
     - String direccion
-    - String tel_fijo
-    - String tel_movil
+    - Long tel_fijo
+    - Long tel_movil
     - Boolean active
     - Boolean admin
     +set()

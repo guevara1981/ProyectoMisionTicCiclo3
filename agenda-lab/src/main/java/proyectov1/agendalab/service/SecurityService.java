@@ -2,20 +2,20 @@ package proyectov1.agendalab.service;
 
 import java.util.List;
 
-import proyectov1.agendalab.controller.dto.UsuariosRespuesta;
-import proyectov1.agendalab.controller.dto.UsuariosSolicitud;
+import proyectov1.agendalab.controller.dto.UsuarioRespuesta;
+import proyectov1.agendalab.controller.dto.UsuarioSolicitud;
 
 public interface SecurityService {
 
-    UsuariosRespuesta validarUsuario(String username, String contrasena);
+    UsuarioRespuesta validarUsuario(String username, String contrasena);
 
-    List<UsuariosRespuesta> getAllUsers();
+    List<UsuarioRespuesta> getAllUsers();
 
-    UsuariosRespuesta getUserByUsername(String username);
+    UsuarioRespuesta getUserByUsername(String username);
 
-    void crearUsuarios(UsuariosSolicitud user);
+    void crearUsuarios(UsuarioSolicitud user);
 
-    void actualizarUsuarios(UsuariosSolicitud user);
+    void actualizarUsuarios(UsuarioSolicitud user);
 
     void borrarUsuarios(String username);
 
