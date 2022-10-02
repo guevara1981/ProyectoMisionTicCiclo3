@@ -34,23 +34,10 @@ public class AgendaLabApplication {
 
 		@Override
 		public void run(String... args) throws Exception {
-			cargarUsuarios();
-			cargarSecciones();
-			cargarExamenes();
+			//cargarUsuarios();
+			//cargarSecciones();
+			//cargarExamenes();
 		}
-
-		// private void cargarSecciones() {
-		// var inmuno = seccionRepository.save(new Seccion("Inmunología"));
-		// var micro = seccionRepository.save(new Seccion("Microbiología"));
-		// var qui = seccionRepository.save(new Seccion("Química"));
-		// var hema = seccionRepository.save(new Seccion("Hematología"));
-
-		// var secciones = Arrays.asList(
-		// new Seccion("Inmunología"),
-		// new Seccion("Microbiología"),
-		// new Seccion("Química"),
-		// new Seccion("Hematología"));
-		// }
 
 		private void cargarUsuarios() {
 			

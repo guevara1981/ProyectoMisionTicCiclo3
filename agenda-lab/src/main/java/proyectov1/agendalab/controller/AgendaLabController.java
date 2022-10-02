@@ -1,6 +1,5 @@
 package proyectov1.agendalab.controller;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import proyectov1.agendalab.controller.dto.ExamenDto;
-import proyectov1.agendalab.controller.dto.SeccionDto;
 import proyectov1.agendalab.service.ExamenService;
 import proyectov1.agendalab.service.SeccionService;
 
@@ -59,8 +57,6 @@ public class AgendaLabController {
         log.info(examenes.toString());
 
         model.addAttribute("examenes", examenes);
-
-        
 
         return "adminlist";
     }

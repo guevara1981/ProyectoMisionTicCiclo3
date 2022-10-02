@@ -3,8 +3,6 @@ package proyectov1.agendalab.service;
 import java.util.List;
 import java.util.Optional;
 
-import proyectov1.agendalab.controller.dto.ExamenDto;
-//import proyectov1.agendalab.controller.dto.ExamenDto;
 import proyectov1.agendalab.controller.dto.SeccionDto;
 
 public interface SeccionService {
