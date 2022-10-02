@@ -114,7 +114,48 @@
     </header><!-- End Header -->
 
     <section id="appointment" class="appointment section-bg">
-    
+        <div class="container">
+            <div class="section-title">
+                <h2 th:text="${exam}">Exámenes</h2>
+            </div>
+
+            <div>
+                <form method="post" action="/adminAgregar">
+                    <div>
+                        <input id="cups" name="cups" type="number" class="form-control" min="900000" max="999999"
+                            placeholder="Código único de prestación de servicios" required><br>
+                    </div>
+
+                    <div>
+                        <select id="seccion" name="seccion" class="form-select">
+                            <option th:each="seccion:${secciones}" th:value="${seccion.id}" th:text="${seccion.nombre}">
+                            </option>
+                        </select>
+                    </div><br>
+
+                    <div>
+                        <input id="examen" name="examen" type="text" class="form-control"
+                            placeholder="Nombre del exámen" required> <br>
+                    </div>
+
+                    <div>
+                        <input id="valor" name="valor" type="number" class="form-control" placeholder="Valor" min="0"
+                            required><br>
+                    </div>
+
+                    <div>
+                        <textarea id="descripcion" name="descripcion" class="form-control" rows="10"
+                            placeholder="Descripción del exámen"></textarea>
+                        <br>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="appointment-btn scrollto" type="submit">Agregar</button>
+                    </div>
+
+                </form>
+
+            </div>
 
     </section>
 

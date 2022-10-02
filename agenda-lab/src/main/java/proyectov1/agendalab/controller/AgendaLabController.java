@@ -22,35 +22,29 @@ public class AgendaLabController {
     private SeccionService seccionService;
     private ExamenService examenService;
 
-    @GetMapping(value = {"","/", "/index", "/index.html"})
-    public String goToIndex(Model model){
+    @GetMapping(value = { "", "/", "/index", "/index.html" })
+    public String goToIndex(Model model) {
         return "index";
     }
 
-    @GetMapping(value = {"/admin", "/admin.html"})
-    public String goToAdmin(Model model){
-        model.addAttribute("exam", "Parametrización de exámenes");
-        
-        var secciones = this.seccionService.getSecciones();
-                     
-        model.addAttribute("secciones", secciones);
-          
+    @GetMapping("/admin")
+    public String goToAdmin(Model model) {
+
         return "admin";
-       
+
     }
 
-    @PostMapping("/admin/exam")
-    public String postExamenRegistro(@ModelAttribute ExamenDto examenInfo, Model model){
+    @PostMapping("/adminAgregar")
+    public String postExamenRegistro(@ModelAttribute ExamenDto examenInfo, Model model) {
         log.info(examenInfo.toString());
-
         examenService.guardarExamen(examenInfo);
         model.addAttribute("info", examenInfo);
-        return "admin";
+        return "adminAgregar";
 
-    } 
+    }
 
     @GetMapping("/list")
-    public String goToAdminList(Model model){
+    public String goToAdminList(Model model) {
         model.addAttribute("list", "Parametrización de exámenes");
 
         List<ExamenDto> examenes = examenService.listarExamenes();
@@ -58,32 +52,43 @@ public class AgendaLabController {
 
         model.addAttribute("examenes", examenes);
 
-        return "adminlist";
+        return "adminList";
+    }
+
+    @GetMapping("/Agregar")
+    public String goToAdminAgregar(Model model) {
+        model.addAttribute("exam", "Parametrización de exámenes");
+
+        var secciones = this.seccionService.getSecciones();
+
+        model.addAttribute("secciones", secciones);
+
+        return "adminAgregar";
     }
 
     @GetMapping("/contactenos")
-    public String goToContactenos(Model model){
+    public String goToContactenos(Model model) {
         return "contactenos";
     }
 
     @GetMapping("/login")
-    public String goToLogin(Model model){
+    public String goToLogin(Model model) {
         return "login";
     }
 
     @GetMapping("/registro")
-    public String goToRegistro(Model model){
+    public String goToRegistro(Model model) {
         return "registro";
     }
 
     @GetMapping("/servicios")
-    public String goToServicios(Model model){
+    public String goToServicios(Model model) {
         return "servicios";
     }
 
     @GetMapping("/usuario")
-    public String goToUsuario(Model model){
+    public String goToUsuario(Model model) {
         return "usuario";
     }
-    
+
 }

@@ -36,13 +36,59 @@
 
 <body>
 
-    <!-- ======= Header ======= 8AC53F color verde, color azul #3F559E -->
+    <!-- ======= Header ======= -->
     <header id="header">
 
         <div class="container d-flex align-items-center">
 
             <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="" class="img-fluid"></a>
 
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+                        <div class="nav-item dropdown px-4">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Exámenes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="/Agregar">Agregar Examen</a></li>
+                                <li><a class="dropdown-item" href="/list">Consultar Examenes</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="nav-item dropdown px-4">
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Citas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Agregar Citas</a></li>
+                                <li><a class="dropdown-item" href="#">Consultar Citas</a></li>
+                                <li><a class="dropdown-item" href="#">Atender Citas</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="nav-item dropdown px-4">
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Usuarios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">Agregar Usuario</a></li>
+                                <li><a class="dropdown-item" href="#">Consultar Usuarios</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
 
             <div class="container d-flex justify-content-end">
                 <ul>
@@ -50,14 +96,14 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <img class="avatar" src="img/logoperfil.jpg" alt="profile" />
-                            <span class="nav-profile-name">Administrador</span>
+                            <span class="nav-profile-name" id="usuario">Administrador</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right navbar-dropdown " aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Perfil</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="index.html">Salir</a></li>
+                            <li><a class="dropdown-item" href="index.html">salir</a></li>
                         </ul>
 
                     </li>
@@ -68,6 +114,7 @@
     </header><!-- End Header -->
 
     <section>
+
         <div class="container">
             <div class="section-title">
                 <h2 th:text="${list}">Mis Examenes</h2>
