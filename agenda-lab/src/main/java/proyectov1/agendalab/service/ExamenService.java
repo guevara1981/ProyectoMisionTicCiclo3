@@ -8,7 +8,7 @@ public interface ExamenService {
 
     void guardarExamen(ExamenDto examen);
 
-    void borrarExamen(ExamenDto examen);
+    void borrarExamen(Long cups);
 
     List<ExamenDto> listarExamenes();
 
