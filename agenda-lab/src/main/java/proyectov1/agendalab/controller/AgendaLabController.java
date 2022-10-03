@@ -62,17 +62,19 @@ public class AgendaLabController {
         return "adminAgregar";
     }
 
+
     @GetMapping("/list")
     public String goToAdminList(Model model) {
         model.addAttribute("list", "Parametrización de exámenes");
 
         List<ExamenDto> examenes = examenService.listarExamenes();
-        log.info(examenes.toString());
+        //log.info(examenes.toString());
 
         model.addAttribute("examenes", examenes);
 
         return "adminList";
     }
+
 
 
     @GetMapping("/contactenos")
