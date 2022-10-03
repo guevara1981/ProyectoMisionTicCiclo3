@@ -7,6 +7,7 @@ import proyectov1.agendalab.controller.dto.ExamenDto;
 public interface ExamenService {
 
     void guardarExamen(ExamenDto examen);
+    void editarExamen (ExamenDto examen);
 
     void borrarExamen(Long cups);
 

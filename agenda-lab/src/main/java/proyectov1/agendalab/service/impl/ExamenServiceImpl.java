@@ -54,5 +54,20 @@ public class ExamenServiceImpl implements ExamenService{
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public void editarExamen(ExamenDto examen) {
+        var entity = new Examen();
+        entity.setCups(examen.getCups());
+        entity.setExamen(examen.getExamen());
+        entity.setDescripcion(examen.getDescripcion());
+        entity.setValor(examen.getValor());
+
+        var seccionOp = seccionRepository.findById(examen.getSeccion());
+        entity.setSeccion(seccionOp.get());
+
+        examenRepository.save(entity);
+        
+    }
+
     
 }

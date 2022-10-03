@@ -11,5 +11,7 @@ public interface SeccionService {
     
     Optional<SeccionDto> getSeccionById(Integer id);
 
+    String getNombre(Integer id);
+
 
 }

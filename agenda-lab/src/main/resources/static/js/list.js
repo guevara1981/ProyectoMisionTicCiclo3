@@ -7,10 +7,9 @@ function transformarEnEditable(nodo) {
 
     if (editando == false) {
 
-        var nodoTd = nodo.parentNode; //Nodo TD
-        var nodoTr = nodoTd.parentNode; //Nodo TR
+        var nodoTd = nodo.parentNode; 
+        var nodoTr = nodoTd.parentNode; 
 
-        var nodoContenedorForm = document.getElementById('contenedorForm'); //Nodo DIV
         var nodosEnTr = nodoTr.getElementsByTagName('td');
 
         var cups = nodosEnTr[0].textContent; 
@@ -20,15 +19,15 @@ function transformarEnEditable(nodo) {
         var descripcion = nodosEnTr[4].textContent; 
         
 
-        var nuevoCodigoHtml = '<td>' + cups + '</td>' +
-                              '<td><input type="text" name="examen" id="examen" value="' + examen + '" size="15"</td>' +
-                              '<td><input type="text" name="seccion" id="seccion" value="' + seccion + '" size="15"</td>' +
-                              '<td><input type="text" name="valor" id="valor" value="' + valor + '" size="5"</td>' +
-                              '<td><textarea type="text" name="descripcion" id="descripcion" rows="2" cols="70">'+ descripcion +'</textarea></td>'+ 
+        var nuevoCodigoHtml = '<td><input form="formul" type="text" name="cups" id="cups" value="' + cups + '" size="5" readonly></td>' +
+                              '<td><input form="formul" type="text" name="examen" id="examen" value="' + examen + '" size="15"></td>' +
+                              '<td><input form="formul" type="text" name="seccion" id="seccion" value="' + seccion + '" size="15"></td>' +
+                              '<td><input form="formul" type="text" name="valor" id="valor" value="' + valor + '" size="10"></td>' +
+                              '<td><textarea form="formul" type="text" name="descripcion" id="descripcion" rows="2" cols="70">'+ descripcion +'</textarea></td>' +
                               '<td>' + 
-                                 '<form name = "formulario" method="get" onsubmit="capturarEnvio()" onreset="anular()">' +
+                                 '<form id="formul" name = "formulario" action="/adminEditar" method="post">' +
                                      '<input class="boton" type = "submit" value="Aceptar">'+ 
-                                     '<input class="boton" type="reset" value="Cancelar">'+
+                                     '<input class="boton" type="reset" value="Cancelar" onclick="anular()">'+
                                  '</form>'
                               '</td>';
 
@@ -40,25 +39,9 @@ function transformarEnEditable(nodo) {
     }
 }
 
-function capturarEnvio() {
-
-    var nodoContenedorForm = document.getElementById('contenedorForm'); //Nodo DIV
-
-    nodoContenedorForm.innerHTML = '<form name = "formulario"  method="get" onsubmit="capturarEnvio()" onreset="anular()">' +
-                                         '<input type="hidden" name="cups" value="' + document.querySelector('#cups').value + '">' +
-                                         '<input type="hidden" name="examen" value="' + document.querySelector('#examen').value + '">' +
-                                         '<input type="hidden" name="seccion" value="' + document.querySelector('#seccion').value + '">' +
-                                         '<input type="hidden" name="valor" value="' + document.querySelector('#valor').value + '">' +
-                                         '<input type="hidden" name="descripcion" value="' + document.querySelector('#descripcion').value + '">' +
-                                         '<input class="boton" type = "submit" value="Aceptar">' +
-                                         '<input class="boton" type="reset" value="Cancelar">'+
-                                     '</form>';
-    document.formulario.submit();
-}
-
 function anular() {
 
-    window.location.reload();
+    window.location.href = "/list";
 
 }
 

@@ -39,4 +39,13 @@ public class SeccionServiceImpl implements SeccionService {
                 seccion.get().getNombre(),
                 seccion.get().getId()));
     }
+
+    @Override
+    public String getNombre(Integer id) {
+        var seccionOp = seccionRepository.findById(id);
+
+        var seccionBd = seccionOp.get().getNombre(); 
+        
+        return seccionBd;
+    }
 }
