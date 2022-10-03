@@ -72,7 +72,7 @@ public class AgendaLabController {
 
         model.addAttribute("examenes", examenes);
 
-        return "adminList";
+        return "/adminList";
     }
 
     @GetMapping("/eliminar/{cups}")
